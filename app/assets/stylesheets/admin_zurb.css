@@ -3,3 +3,19 @@
  *= require foundation_and_overrides
 
  */
+body {
+    color: #656C70;
+    background-color: #f3f3f3;
+}
+
+.logo-bg {
+    background-color: #f16c65;
+}
+
+.top-bar,.top-bar ul {
+    background-color: #2d2f3b;
+}
+
+.side-nav {
+    background: #fff;
+}

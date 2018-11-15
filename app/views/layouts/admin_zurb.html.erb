@@ -1,15 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <meta charset="utf-8"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Title</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'admin_zurb', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%#= javascript_include_tag 'admin_zurb', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'admin_zurb', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'admin_zurb', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-<%= yield %>
+<div class="grid-x">
+  <div class="cell small-5 medium-3 large-2 logo-bg">6 cells</div>
+  <div class="cell small-7 medium-9 large-10">
+    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+      <div class="title-bar-title">Menu</div>
+    </div>
+
+    <div class="top-bar" id="responsive-menu">
+      <div class="top-bar-left">
+        <ul class="dropdown menu top-menu" data-dropdown-menu>
+          <li class="menu-text">Site Title</li>
+          <li class="has-submenu">
+            <a href="#0">One</a>
+            <ul class="submenu menu vertical" data-submenu>
+              <li><a href="#0">One</a></li>
+              <li><a href="#0">Two</a></li>
+              <li><a href="#0">Three</a></li>
+            </ul>
+          </li>
+          <li><a href="#0">Two</a></li>
+          <li><a href="#0">Three</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <li><button type="button" class="button">Search</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="grid-x">
+  <div class="cell small-5 medium-3 large-2 side-nav">
+    <ul class="vertical menu">
+      <li>
+        <a href="#">One</a>
+        <ul class="nested vertical menu">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Two</a></li>
+      <li><a href="#">Three</a></li>
+      <li><a href="#">Four</a></li>
+    </ul>
+  </div>
+  <div class="cell auto"><%= yield %></div>
+</div>
+
 </body>
 </html>
