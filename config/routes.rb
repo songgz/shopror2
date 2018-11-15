@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :homes
     get 'home/index'
   end
-
+  get '/admin' => 'admin/homes#index'
   devise_for :managers, module: 'managers'
   devise_for :customers, module: 'customers'
 
