@@ -22,25 +22,7 @@
 
     <div class="top-bar" id="responsive-menu">
       <div class="top-bar-left">
-        <ul class="dropdown menu top-menu" data-dropdown-menu>
-          <li class="menu-text">Site Title</li>
-          <li class="has-submenu">
-            <a href="#0">One</a>
-            <ul class="submenu menu vertical" data-submenu>
-              <li><a href="#0">One</a></li>
-              <li><a href="#0">Two</a></li>
-              <li><a href="#0">Three</a></li>
-            </ul>
-          </li>
-          <li><a href="#0">Two</a></li>
-          <li><a href="#0">Three</a></li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li><input type="search" placeholder="Search"></li>
-          <li><button type="button" class="button">Search</button></li>
-        </ul>
+        <%= AdminMenuDirector.new.build.result.html_safe %>
       </div>
     </div>
   </div>
@@ -48,20 +30,6 @@
 <div class="grid-x">
   <div class="cell small-5 medium-3 large-2 side-nav">
     <%= AdminCategoryDirector.new.build.result.html_safe%>
-    <ul class="vertical menu">
-      <li>
-        <a href="#">One</a>
-        <ul class="nested vertical menu">
-          <li><a href="#">One</a></li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-          <li><a href="#">Four</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Two</a></li>
-      <li><a href="#">Three</a></li>
-      <li><a href="#">Four</a></li>
-    </ul>
   </div>
   <div class="cell auto"><%= yield %></div>
 </div>

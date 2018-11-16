@@ -17,10 +17,10 @@ class Product
   field :sells, type: Integer, default: 0
   mount_uploader :img, ImgUploader
 
-  has_and_belongs_to_many :categories
-  belongs_to :shop, class_name: 'Shop'
-  belongs_to :supplier, class_name: 'Supplier'
-  belongs_to :customer_group
+  has_and_belongs_to_many :categories, inverse_of: nil
+  belongs_to :shop, class_name: 'Shop', required: false
+  belongs_to :supplier, class_name: 'Supplier', required: false
+  belongs_to :customer_group, required: false
   embeds_many :variants
   embeds_many :reviews
 

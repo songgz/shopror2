@@ -1,3 +1,4 @@
+# encoding: utf-8
 namespace :shopror do
   desc "create the init data"
   task :init => :environment do |task, args|

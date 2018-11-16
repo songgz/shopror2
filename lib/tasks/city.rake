@@ -1,3 +1,4 @@
+# encoding: utf-8
 namespace :shopror do
   desc "create the city data"
   task :city => :environment do |task, args|

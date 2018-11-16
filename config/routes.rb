@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :products
+  namespace :admin do
+    resources :categories
+    resources :products
+  end
   #devise_for :users
   namespace :admin do
     resources :homes

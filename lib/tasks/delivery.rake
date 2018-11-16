@@ -1,3 +1,4 @@
+# encoding: utf-8
 namespace :shopror do
   desc "create the delivery data"
   task :delivery => :environment do |task, args|
