@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   resources :products
   namespace :admin do
-    resources :categories
-    resources :products
+    resources :categories do
+      resources :products
+    end
+    resources :products do
+      resources :variants
+    end
   end
   #devise_for :users
   namespace :admin do

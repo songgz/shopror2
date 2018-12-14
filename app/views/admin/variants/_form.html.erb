@@ -1,0 +1,17 @@
+<%= form_with(model: admin_variant, local: true) do |form| %>
+  <% if admin_variant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_variant.errors.count, "error") %> prohibited this admin_variant from being saved:</h2>
+
+      <ul>
+      <% admin_variant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

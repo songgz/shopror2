@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admin Variants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_variants.each do |admin_variant| %>
+      <tr>
+        <td><%= link_to 'Show', admin_variant %></td>
+        <td><%= link_to 'Edit', edit_admin_variant_path(admin_variant) %></td>
+        <td><%= link_to 'Destroy', admin_variant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin Variant', new_admin_variant_path %>
